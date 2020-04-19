@@ -63,7 +63,7 @@ include("includes/classes/workspace.php");
 				  <input class="form-control" type="text" name="add_equip_model" placeholder="Model" required>
 				  <input class="form-control" type="number" name="add_equip_value" placeholder="Wartość pln" required>
 				  <label for="add_equip_date">Data zakupu</label>
-				  <input class="form-control" type="date" name="add_equip_date" id="add_equip_date" placeholder="Data zakupu" required>
+				  <input class="form-control" type="date" name="add_equip_date" id="add_equip_date" required>
 				  <input class="form-control" type="text" name="add_equip_ws_name" placeholder="Nazwa stanowiska do którego ma być przypisany sprzęt" required>
 				  <div class="invalid-input" id="add_equip_ws_name_invalid"></div>
 				  <textarea class="form-control" name="add_equip_description" placeholder="Opis" required></textarea>		
