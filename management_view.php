@@ -30,7 +30,7 @@ include("includes/classes/workspace.php");
       <div class="modal-body">		  
 		  <form action="" class="new_workstation_date_form" id="modal_form" method="POST">
 			  <div class="form-group">
-				  <input class="form-control" type="text" name="add_ws_name" placeholder="Nazwa własna stanowiska pracy" required>
+				  <input class="form-control" type="text" name="add_ws_name" placeholder="Nazwa własna stanowiska pracy" maxlength="50" required>
 				  <textarea class="form-control" name="add_ws_description" placeholder="Opis" required></textarea>		
 			  </div>			
 		  </form>
@@ -59,13 +59,13 @@ include("includes/classes/workspace.php");
       <div class="modal-body">		  
 		  <form action="" class="new_equipment_date_form" id="add_equipment_modal_form" method="POST">
 			  <div class="form-group">
-				  <input class="form-control" type="text" name="add_equip_name" placeholder="Nazwa własna" required>
-				  <input class="form-control" type="text" name="add_equip_type" placeholder="Rodzaj" required>
-				  <input class="form-control" type="text" name="add_equip_model" placeholder="Model" required>
+				  <input class="form-control" type="text" name="add_equip_name" placeholder="Nazwa własna" maxlength="50" required>
+				  <input class="form-control" type="text" name="add_equip_type" placeholder="Rodzaj" maxlength="50" required>
+				  <input class="form-control" type="text" name="add_equip_model" placeholder="Model" maxlength="50" required>
 				  <input class="form-control" type="number" name="add_equip_value" placeholder="Wartość pln" required>
 				  <label for="add_equip_date">Data zakupu</label>
 				  <input class="form-control" type="date" name="add_equip_date" id="add_equip_date" required>
-				  <input class="form-control" type="text" name="add_equip_ws_name" placeholder="Nazwa stanowiska do którego ma być przypisany sprzęt" required>
+				  <input class="form-control" type="text" name="add_equip_ws_name" placeholder="Nazwa stanowiska do którego ma być przypisany sprzęt" maxlength="50" required>
 				  <div class="invalid-input" id="add_equip_ws_name_invalid"></div>
 				  <textarea class="form-control" name="add_equip_description" placeholder="Opis" required></textarea>		
 			  </div>			
