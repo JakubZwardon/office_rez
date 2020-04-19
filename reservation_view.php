@@ -2,13 +2,12 @@
 include("includes/header.php");
 
 ?>
+<div class="new_reservation column">
+	<input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#new_reservation_modal" value="Dokonaj rezerwacji!">
+</div>
 
 <div class="main_column column">
 
-    <div class="new_reservation">
-        <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#new_reservation_modal" value="Dokonaj rezerwacji!">
-    </div>
-	
     <div class="reservation_area"></div>
     <img id="loading" style="height: 40px" src="assets/images/icons/loading.gif" />
 </div>
