@@ -27,12 +27,12 @@ include("includes/header.php");
       <div class="modal-body">		  
 		  <form action="" class="new_reservation_date_form" id="new_reservation_modal_form" method="POST">
 			  <div class="form-group">
-                  <input class="form-control" type="text" name="add_res_fname" placeholder="Imię" required>
-                  <input class="form-control" type="text" name="add_res_lname" placeholder="Nazwisko" required>
-                  <input class="form-control" type="email" name="add_res_mail" placeholder="E-mail" required>
-                  <input class="form-control" type="tel" name="add_res_phone" placeholder="Telefon 123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>                  
+                  <input class="form-control" type="text" name="add_res_fname" placeholder="Imię" maxlength="50" required>
+                  <input class="form-control" type="text" name="add_res_lname" placeholder="Nazwisko" maxlength="50" required>
+                  <input class="form-control" type="email" name="add_res_mail" placeholder="E-mail" maxlength="50" required>
+                  <input class="form-control" type="tel" name="add_res_phone" placeholder="Telefon 123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" maxlength="15" required>                  
                   <textarea class="form-control" name="add_res_description" placeholder="Opis" required></textarea>
-                  <input class="form-control" type="text" name="add_res_workspace" placeholder="Nazwa stanowiska" required>
+                  <input class="form-control" type="text" name="add_res_workspace" placeholder="Nazwa stanowiska" maxlength="50" required>
                   <div class="invalid-input" id="add_res_ws_name_invalid"></div>
                   <label for="add_res_from_date">Początek rezerwacji</label>
                   <input class="form-control" type="date" name="add_res_from_date" id="add_res_from_date" required>
