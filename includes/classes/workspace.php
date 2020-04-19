@@ -53,7 +53,7 @@ class Workspace {
                         $moveEquipButton = "<button class='move_button btn-warning' id='moveEquip$equipId' title='przydziel do innego stanowiska'>-></button>";
 
                         $equipString .= "<div class='equipment'>
-                                            <span>Nazwa: </span> $equipName <span>Typ: </span> $equipType <span>Model: </span>$equipModel <span>Rok produkcji: </span> $equipYear <span>Koszt: </span> $equipValue $deleteEquipButton $moveEquipButton
+                                            <span>Nazwa: </span> $equipName <span>Typ: </span> $equipType <span>Model: </span>$equipModel <span>Rok produkcji: </span> $equipYear <span>Koszt: </span> $equipValue pln. $deleteEquipButton $moveEquipButton
                                             <br><span>Opis: </span> $equipDescription
                                         </div>";
 
