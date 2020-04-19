@@ -1,0 +1,133 @@
+body {
+    line-height: 17px;
+    background-color: #e6eae8;
+}
+
+a {
+    color: #39c8ba;
+    text-decoration: none;
+}
+
+hr {
+    border: 2px solid #7898d5;
+}
+
+.top_bar {
+    width: 100%;
+    min-width: 1050px;
+    height: 40px;
+	background-color: #39c8ba;
+    border-bottom: 0.25em solid #7898d5;
+    margin: 0 0 10px 0;
+    display: inline-flex;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo a{
+    font-family: sans-serif;
+    margin-left: 10px;
+    font-size: 30px;
+    position: relative;
+    top: 9px;
+    color: #4a6eb3;
+    text-shadow: #bfe8ea 0.5px 0.5px 0px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+nav {
+    float: right;
+    right: 1px;
+    position: absolute;
+    margin: 10px;
+}
+
+nav a{
+    font-family: sans-serif;
+    font-weight: bold;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    border-bottom: 7px solid #ff944c;
+    color: #fff;
+}
+
+.wrapper {
+    margin: 0 auto;
+    top: 50px;
+    position: relative;
+    padding: 0 10px;
+    width: 60%;
+    min-width: 950px;
+}
+
+.column {
+    background-color: #fff;
+    padding: 10px;    
+    border: 1px solid #d3d3d3;    
+    border-radius: 5px;    
+    box-shadow: 2px 2px 1px #d3d3d3;    
+    z-index: -1;
+}
+
+.main_column {
+    min-height: 160px;
+}
+
+.management_area {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.new_reservation {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.workplace {
+    min-height: 120px;
+}
+
+.equipment {
+    padding: 5px 0;
+}
+
+.equipment span {
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.reservation {
+    padding: 5px 0;
+}
+
+.reservation span {
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.person_name {
+    color: #0d3172;
+}
+
+.move_button {
+    float: right;
+    padding: 5px;
+    width: 50px;
+}
+
+.delete_button {
+    float: right;
+    margin-right: 20px;
+    padding: 5px;
+    width: 50px;
+}
+
+
