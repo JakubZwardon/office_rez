@@ -76,14 +76,14 @@ class Reservation {
 
                 $str .= "<div class='reservation'>
                             <div class='person_info'>
-                                <p><span>$personFName $personLName </span><span>$personMail </span><span>$personPhoneNum</span></p>
-                                <p><span>$personDescription</span></p>
+                                <p><span class='person_name'>$personFName $personLName </span><span>E-mail: </span>$personMail<span>Telefon: </span>$personPhoneNum</p>
+                                <p><span>Opis: </span>$personDescription</p>
                             </div>
                             <div class='date_info'>
-                                <p>Rezerwacja <span>Od: </span>$resDateFrom<span> Do: </span>$resDateTo</p>                                
+                                <p><span>Rezerwacja Od: </span>$resDateFrom<span> Do: </span>$resDateTo</p>                                
                             </div>
                             <div class='workspace_info'>
-                                <p><span>Nazwa Stanowiska </span>$workspaceName</p>                                
+                                <p><span>Nazwa Stanowiska: </span>$workspaceName</p>                                
                             </div>
                         </div>
                         <hr />";
