@@ -53,7 +53,8 @@ class Workspace {
                         $moveEquipButton = "<button class='move_button btn-warning' id='moveEquip$equipId' title='przydziel do innego stanowiska'>-></button>";
 
                         $equipString .= "<div class='equipment'>
-                                            $equipName Model: $equipModel $deleteEquipButton $moveEquipButton
+                                            <span>Nazwa: </span> $equipName <span>Typ: </span> $equipType <span>Model: </span>$equipModel <span>Rok produkcji: </span> $equipYear <span>Koszt: </span> $equipValue $deleteEquipButton $moveEquipButton
+                                            <br><span>Opis: </span> $equipDescription
                                         </div>";
 
                         ?>
@@ -103,9 +104,7 @@ class Workspace {
                 $str .= "<div class='workplace'>
                             <h4>$wsName</h4>
                             <p>$wsDescription</p>
-                            $equipString                            
-                            <div class='manage_panel'>
-                            </div>
+                            $equipString
                         </div>
                         <hr />";
             }            
