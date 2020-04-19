@@ -4,11 +4,12 @@ include("includes/classes/workspace.php");
 
 ?>
 
+<div class="management_area column">
+	<input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#workspace_modal" value="Dodaj Stanowisko pracy">
+	<input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#equipment_modal" value="Dodaj sprzęt">
+</div>
+
 <div class="main_column column">
-    <div class="management_area">
-		<input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#workspace_modal" value="Dodaj Stanowisko pracy">
-        <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="#equipment_modal" value="Dodaj sprzęt">
-    </div>
 
 	<div class="workplace_area"></div>
     <img id="loading" style="height: 40px" src="assets/images/icons/loading.gif" />
