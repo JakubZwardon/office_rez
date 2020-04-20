@@ -56,6 +56,14 @@ include("../classes/person.php");
                 echo "DateTaken";
                 return;
             }
+            if($stampTo <= $stampFrom) {
+                echo "DateInvalid"; //end date cannot be less than start date
+                return;
+            }
+            if($stampFrom < new DateTime(date("Y-m-d H:i:s"))) {
+                echo "DateLess"; //connot be less then current
+                return;
+            }
         }
         //if date is free to take, do reservation
         if($isFreeDate) {        

@@ -39,6 +39,8 @@ $(document).ready(function() {
 
     //submit add reservation button
     $('#new_reservation_modal_form').submit(function() {
+        $('#add_res_ws_name_invalid').html("");
+        $('#add_res_date_invalid').html("");
         debugger;
         $.ajax({
             method: "POST",
@@ -51,6 +53,12 @@ $(document).ready(function() {
                 } else if(msg == "DateTaken") {
                     debugger;
                     $('#add_res_date_invalid').html("Podany termin jest zajęty!");
+                } else if(msg == "DateInvalid") {
+                    debugger;
+                    $('#add_res_date_invalid').html("Końcowa data nie może być wcześniejsza niż początkowa!");
+                } else if(msg == "DateLess") {
+                    debugger;
+                    $('#add_res_date_invalid').html("Nie cofniesz się chyba w czasie:)!");
                 } else {
                     debugger;
                     $("#new_reservation_modal").modal('hide');
