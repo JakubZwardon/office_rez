@@ -5,12 +5,12 @@ include("../classes/reservation.php");
 include("../classes/person.php");
 
 
-    $presonFirstName = $_POST['add_res_fname'];
-    $presonLatsName = $_POST['add_res_lname'];
-    $personMail = $_POST['add_res_mail'];
-    $personPhone = $_POST['add_res_phone'];
-    $personDescription = $_POST['add_res_description'];
-    $workspaceName = $_POST['add_res_workspace'];
+    $presonFirstName = strip_tags($_POST['add_res_fname']);
+    $presonLatsName = strip_tags($_POST['add_res_lname']);
+    $personMail = strip_tags($_POST['add_res_mail']);
+    $personPhone = strip_tags($_POST['add_res_phone']);
+    $personDescription = strip_tags($_POST['add_res_description']);
+    $workspaceName = strip_tags($_POST['add_res_workspace']);
     $fromDate = $_POST['add_res_from_date'];
     $toDate = $_POST['add_res_to_date'];
     $fromTime = $_POST['add_res_from_time'];
