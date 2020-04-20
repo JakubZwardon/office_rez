@@ -75,7 +75,7 @@ $(document).ready(function() {
 		let height = $('.reservation_area').height();
 		let scrollTop = $(this).scrollTop();
 		let page = $('.reservation_area').find('.next_page').val();
-		let noMoreReservations = $('.reservation_area').find('.no_more_workplaces').val();
+		let noMoreReservations = $('.reservation_area').find('.no_more_reservations').val();
 
 		if((document.body.scrollHeight == document.body.scrollTop + window.innerHeight) && (noMoreReservations == 'false')) {
 			$('#loading').show();
