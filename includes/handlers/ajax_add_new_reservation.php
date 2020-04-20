@@ -16,8 +16,8 @@ include("../classes/person.php");
     $fromTime = $_POST['add_res_from_time'];
     $toTime = $_POST['add_res_to_time'];
 
-    $stampFrom = new DateTime($fromDate . " " . $fromTime);
-    $stampTo = new DateTime($toDate . " " . $toTime);
+    $timeFrom = new DateTime($fromDate . " " . $fromTime);
+    $timeTo = new DateTime($toDate . " " . $toTime);
 
     $query = mysqli_query($con, "SELECT id FROM workspaces WHERE name='$workspaceName'");
 
@@ -31,36 +31,36 @@ include("../classes/person.php");
             $takenFromDate = $date_check_row['date_from'];
             $takenToDate = $date_check_row['date_to'];
 
-            //convert to timestamp
-            $stampTakenFrom = new DateTime($takenFromDate);
-            $stampTakenTo = new DateTime($takenToDate);
+            //convert to DateTime
+            $timeTakenFrom = new DateTime($takenFromDate);
+            $timeTakenTo = new DateTime($takenToDate);
 
             //check if the given date is taken
-            if(($stampFrom >= $stampTakenFrom) && ($stampFrom <= $stampTakenTo)) {
+            if(($timeFrom >= $timeTakenFrom) && ($timeFrom <= $timeTakenTo)) {
                 $isFreeDate = false;
                 echo "DateTaken";
                 return;
             }
-            if(($stampTo >= $stampTakenFrom) && ($stampTo <= $stampTakenTo)) {
+            if(($timeTo >= $timeTakenFrom) && ($timeTo <= $timeTakenTo)) {
                 $isFreeDate = false;
                 echo "DateTaken";
                 return;
             }
-            if(($stampTakenFrom >= $stampFrom) && ($stampTakenFrom <= $stampTo)) {
+            if(($timeTakenFrom >= $timeFrom) && ($timeTakenFrom <= $timeTo)) {
                 $isFreeDate = false;
                 echo "DateTaken";
                 return;
             }
-            if(($stampTakenTo >= $stampFrom) && ($stampTakenTo <= $stampTo)) {
+            if(($timeTakenTo >= $timeFrom) && ($timeTakenTo <= $timeTo)) {
                 $isFreeDate = false;
                 echo "DateTaken";
                 return;
             }
-            if($stampTo <= $stampFrom) {
+            if($timeTo <= $timeFrom) {
                 echo "DateInvalid"; //end date cannot be less than start date
                 return;
             }
-            if($stampFrom < new DateTime(date("Y-m-d H:i:s"))) {
+            if($timeFrom < new DateTime(date("Y-m-d H:i:s"))) {
                 echo "DateLess"; //connot be less then current
                 return;
             }
@@ -72,7 +72,7 @@ include("../classes/person.php");
             $personId = mysqli_insert_id($con);
     
             
-            $reservation = new Reservation($con, $stampFrom->format('Y-m-d H:i:s'), $stampTo->format('Y-m-d H:i:s'), $workspaceId, $personId);
+            $reservation = new Reservation($con, $timeFrom->format('Y-m-d H:i:s'), $timeTo->format('Y-m-d H:i:s'), $workspaceId, $personId);
             $reservation->saveReservation();
             
         }
